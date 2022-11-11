@@ -14,7 +14,7 @@ const TrainingCard: React.FC<{
           width={400}
           height={300}
           alt="Image not found"
-        ></Image>
+        />
         <h1>{props.title}</h1>
         <p>{props.description}</p>
         <div className={classes.button_position}>

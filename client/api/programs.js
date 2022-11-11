@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:5000/programs",
+  baseURL: "https://personal-trainer-website-elronkarni.vercel.app/programs",
 });
