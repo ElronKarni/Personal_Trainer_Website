@@ -4,6 +4,7 @@ import TrainingCard from "../../components/UI/TrainingCard/TrainingCard";
 import MotionWrap from "../../wrapper/MotionWrap";
 import api from "../../api/programs";
 
+
 const About = () => {
   const { data, isLoading, isError } = useQuery(["programsData"], async () => {
     return await api.get().then((res) => res.data);
@@ -16,6 +17,7 @@ const About = () => {
   if (isError) {
     return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
   }
+
   return (
     <div className={classes.programs}>
       <div className={classes.programs_title}>
