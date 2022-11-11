@@ -1,0 +1,26 @@
+@import "../../styles/Variables/Variables.scss";
+@import "../../styles/breakpoints/breakpoints.scss";
+
+.programs {
+  .programs_title {
+    width: 100%;
+    background-color: $blackColor;
+    border: 3px solid $pinkColor;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      font-family: $titleFont;
+      font-size: 3rem;
+      color: $pinkColor;
+      margin: 0.4rem;
+      @include media("<=Resp660") {
+        font-size: 1rem;
+      }
+    }
+  }
+  .all_cards {
+    display: flex;
+    justify-content: center;
+  }
+}

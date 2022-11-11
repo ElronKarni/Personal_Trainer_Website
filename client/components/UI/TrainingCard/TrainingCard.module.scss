@@ -1,0 +1,75 @@
+@import "../../../Styles/Variables/Variables.scss";
+@import "../../../styles/breakpoints/breakpoints.scss";
+
+.card {
+  color: $whiteColor;
+  padding: 1rem;
+
+  font-family: $titleFont;
+
+  .items_position {
+    border: 3px solid $pinkColor;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 100%;
+    max-width: 400px;
+
+    // box-shadow: 7px 7px 10px lightpink;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 lightpink;
+    background-color: $blackColor;
+
+    @include media("<=Resp660") {
+      max-width: 360px;
+    }
+
+    img {
+      max-width: 400px;
+      padding-left: 0.4rem;
+      min-height: 300px;
+      @include media("<=Resp660") {
+        max-width: 400px;
+        padding-left: 2.9rem;
+      }
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+      height: 40px;
+      font-size: 25px;
+      @include media("<=Resp660") {
+        max-width: 300px;
+      }
+    }
+
+    p {
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px;
+      min-height: 220px;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      text-align: justify;
+      margin-top: 0rem;
+      padding: 0rem 1rem;
+
+      @include media("<=Resp660") {
+        max-width: 300px;
+      }
+    }
+
+    .button_position {
+      padding-bottom: 1rem;
+
+      button {
+        font-size: 20px;
+        width: 80px;
+        min-height: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../../styles/Variables/Variables.scss";
+@import "../../../styles/breakpoints/breakpoints.scss";
+
+.options_card {
+  color: $whiteColor;
+  padding: 1rem;
+
+  font-family: $titleFont;
+
+  .options_position {
+    border: 3px solid $pinkColor;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: 100%;
+    width: 550px;
+
+    border-radius: 6%;
+    // box-shadow: 7px 7px 10px lightpink;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 lightpink;
+    background-color: $blackColor;
+
+    @include media("<=Resp660") {
+      width: 360px;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      width: 500px;
+      height: 20px;
+      font-size: 30px;
+      padding-bottom: 2rem;
+
+      @include media("<=Resp660") {
+        font-size: 1.3rem;
+        width: 300px;
+      }
+    }
+
+    .p_border {
+      border-top: 3px solid $pinkColor;
+      padding: 1.4rem;
+
+      p {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        min-height: 150px;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        text-align: justify;
+        padding: 0rem 1rem;
+        @include media("<=Resp660") {
+          font-size: 1rem;
+          width: 300px;
+        }
+      }
+    }
+
+    .options_button_position {
+      padding-bottom: 1rem;
+      button {
+        font-size: 20px;
+        min-height: 40px;
+      }
+    }
+  }
+}
