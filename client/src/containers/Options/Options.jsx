@@ -2,11 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import classes from "./Options.module.scss";
 import MotionWrap from "../../wrapper/MotionWrap";
 import OptionCard from "../../components/UI/OptionCard/OptionCard";
-import api from "../../api/options";
+import axios from "axios";
 
 const Options = () => {
   const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
-    return await api.get().then((res) => res.data);
+    return await axios.get("/api/options").then((res) => res.data);
   });
 
   if (isLoading) {

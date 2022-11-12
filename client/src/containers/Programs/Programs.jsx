@@ -2,12 +2,12 @@ import { useQuery } from "@tanstack/react-query";
 import classes from "./Programs.module.scss";
 import TrainingCard from "../../components/UI/TrainingCard/TrainingCard";
 import MotionWrap from "../../wrapper/MotionWrap";
-import api from "../../api/programs";
-
-
+import axios from "axios";
+import trx from "../../../public/assets/trx.png";
+import kickbox from "../../../public/assets/kickbox.png";
 const About = () => {
   const { data, isLoading, isError } = useQuery(["programsData"], async () => {
-    return await api.get().then((res) => res.data);
+    return await axios.get("/api/programs").then((res) => res.data);
   });
 
   if (isLoading) {
