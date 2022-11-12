@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         const Options = await Option.find();
         res.json(Options);
       } catch (err) {
-        res.json(err);
+        res.json("there is an error");
       }
   }
 }

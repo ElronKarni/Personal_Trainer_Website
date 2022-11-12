@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         const Programs = await Program.find();
         res.json(Programs);
       } catch (err) {
-        res.json(err);
+        res.json("there is an error");
       }
   }
 }
