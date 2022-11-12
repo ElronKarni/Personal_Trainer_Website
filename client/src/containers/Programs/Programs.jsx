@@ -5,9 +5,12 @@ import MotionWrap from "../../wrapper/MotionWrap";
 import axios from "axios";
 import trx from "../../../public/assets/trx.png";
 import kickbox from "../../../public/assets/kickbox.png";
+
 const About = () => {
   const { data, isLoading, isError } = useQuery(["programsData"], async () => {
-    return await axios.get("/api/programs").then((res) => res.data);
+    return await axios
+      .get("https://personal-trainer-website.vercel.app/api/programs")
+      .then((res) => res.data);
   });
 
   if (isLoading) {

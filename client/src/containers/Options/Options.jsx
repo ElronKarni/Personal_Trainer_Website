@@ -6,7 +6,9 @@ import axios from "axios";
 
 const Options = () => {
   const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
-    return await axios.get("/api/options").then((res) => res.data);
+    return await axios
+      .get("https://personal-trainer-website.vercel.app/api/options")
+      .then((res) => res.data);
   });
 
   if (isLoading) {
