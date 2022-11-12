@@ -3,7 +3,7 @@
 
 .options_card {
   color: $whiteColor;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 
   font-family: $titleFont;
 
@@ -22,7 +22,7 @@
     background-color: $blackColor;
 
     @include media("<=Resp660") {
-      width: 360px;
+      width: 310px;
     }
 
     h1 {
@@ -34,7 +34,7 @@
       padding-bottom: 2rem;
 
       @include media("<=Resp660") {
-        font-size: 1.3rem;
+        font-size: 1rem;
         width: 300px;
       }
     }
@@ -54,8 +54,8 @@
         text-align: justify;
         padding: 0rem 1rem;
         @include media("<=Resp660") {
-          font-size: 1rem;
-          width: 300px;
+          font-size: 0.8rem;
+          width: 260px;
         }
       }
     }
@@ -65,6 +65,10 @@
       button {
         font-size: 20px;
         min-height: 40px;
+        @include media("<=Resp660") {
+          font-size: 15px;
+          min-height: 30px;
+        }
       }
     }
   }
