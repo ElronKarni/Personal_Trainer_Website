@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 
 const About = () => {
   const [programs, setPrograms] = useState([]);
+  const [fetch, setFetch] = useState(false);
   // const { data, isLoading, isError } = useQuery(["programsData"], async () => {
   //   return await axios
   //     .get("https://personal-trainer-website.vercel.app/api/programs")
@@ -33,7 +34,7 @@ const About = () => {
 
   useEffect(() => {
     fetching;
-  }, []);
+  }, [fetch]);
 
   return (
     <div className={classes.programs}>
@@ -49,6 +50,7 @@ const About = () => {
             description={program.description}
           />
         ))}
+        <button onClick={setFetch(!fetch)}>fetch</button>
       </section>
     </div>
   );
