@@ -3,7 +3,7 @@
 
 .card {
   color: $whiteColor;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 
   font-family: $titleFont;
 
@@ -14,25 +14,39 @@
     flex-direction: column;
 
     min-height: 100%;
-    max-width: 400px;
+    max-width: 100%;
 
     // box-shadow: 7px 7px 10px lightpink;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 lightpink;
     background-color: $blackColor;
 
     @include media("<=Resp660") {
-      max-width: 360px;
+      max-width: 305px;
     }
 
-    img {
-      max-width: 400px;
-      padding-left: 0.4rem;
-      min-height: 300px;
-      @include media("<=Resp660") {
-        max-width: 400px;
-        padding-left: 2.9rem;
+    .image_container {
+      width: 100%;
+      @include media(">=Resp660") {
+        width: 420px;
+        height: 282px;
       }
     }
+
+    .img {
+      max-height: 100%;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+    // .img {
+    //   max-width: 400px;
+    //   padding-left: 0.4rem;
+    //   min-height: 300px;
+    //   @include media("<=Resp660") {
+    //     max-width: 400px;
+    //     // padding-left: 2.9rem;
+    //   }
+    // }
 
     h1 {
       display: flex;
@@ -41,6 +55,7 @@
       height: 40px;
       font-size: 25px;
       @include media("<=Resp660") {
+        font-size: 1rem;
         max-width: 300px;
       }
     }
@@ -58,6 +73,7 @@
       padding: 0rem 1rem;
 
       @include media("<=Resp660") {
+        font-size: 0.8rem;
         max-width: 300px;
       }
     }
@@ -69,6 +85,11 @@
         font-size: 20px;
         width: 80px;
         min-height: 40px;
+
+        @include media("<=Resp660") {
+          font-size: 15px;
+          min-height: 30px;
+        }
       }
     }
   }

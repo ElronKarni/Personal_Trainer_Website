@@ -9,12 +9,15 @@ const TrainingCard: React.FC<{
   return (
     <div className={classes.card}>
       <div className={classes.items_position}>
-        <Image
-          src={props.image}
-          width={400}
-          height={300}
-          alt="Image not found"
-        />
+        <div className={classes.image_container}>
+          <Image
+            src={props.image}
+            layout="fill"
+            className={classes.img}
+            alt="missing pic"
+          />
+        </div>
+
         <h1>{props.title}</h1>
         <p>{props.description}</p>
         <div className={classes.button_position}>
