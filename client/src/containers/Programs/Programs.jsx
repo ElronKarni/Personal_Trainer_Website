@@ -5,21 +5,35 @@ import MotionWrap from "../../wrapper/MotionWrap";
 import axios from "axios";
 import trx from "../../../public/assets/trx.png";
 import kickbox from "../../../public/assets/kickbox.png";
+import { useState, useEffect } from "react";
 
 const About = () => {
-  const { data, isLoading, isError } = useQuery(["programsData"], async () => {
-    return await axios
-      .get("https://personal-trainer-website.vercel.app/api/programs")
-      .then((res) => res.data);
-  });
+  const [programs, setPrograms] = useState([]);
+  // const { data, isLoading, isError } = useQuery(["programsData"], async () => {
+  //   return await axios
+  //     .get("https://personal-trainer-website.vercel.app/api/programs")
+  //     .then((res) => res.data);
+  // });
 
-  if (isLoading) {
-    return <h1>טוען...</h1>;
-  }
+  // if (isLoading) {
+  //   return <h1>טוען...</h1>;
+  // }
 
-  if (isError) {
-    return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
-  }
+  // if (isError) {
+  //   return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
+  // }
+
+  const fetching = async () => {
+    const res = await axios.get(
+      "https://personal-trainer-website.vercel.app/api/options"
+    );
+    const programs = res.data;
+    setPrograms(programs);
+  };
+
+  useEffect(() => {
+    fetching;
+  }, []);
 
   return (
     <div className={classes.programs}>
@@ -27,7 +41,7 @@ const About = () => {
         <h1>תוכנית אימונים</h1>
       </div>
       <section className={classes.all_cards}>
-        {data?.map((program) => (
+        {programs?.map((program) => (
           <TrainingCard
             key={program._id}
             image={program.image}
