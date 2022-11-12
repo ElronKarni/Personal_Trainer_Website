@@ -25,7 +25,7 @@ const About = () => {
 
   const fetching = async () => {
     const res = await axios.get(
-      "https://personal-trainer-website.vercel.app/api/options"
+      "https://personal-trainer-website.vercel.app/api/programs"
     );
     const programs = res.data;
     setPrograms(programs);
