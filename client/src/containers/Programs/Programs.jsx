@@ -3,6 +3,7 @@ import classes from "./Programs.module.scss";
 import TrainingCard from "../../components/UI/TrainingCard/TrainingCard";
 import MotionWrap from "../../wrapper/MotionWrap";
 import axios from "axios";
+import { Oval } from "react-loader-spinner";
 import trx from "../../../public/assets/trx.png";
 import kickbox from "../../../public/assets/kickbox.png";
 
@@ -14,11 +15,21 @@ const About = () => {
   });
 
   if (isLoading) {
-    return <h1>טוען...</h1>;
+    return (
+      <Oval
+        height="80"
+        width="100"
+        radius="8"
+        color="pink"
+        secondaryColor="black"
+        ariaLabel="loading"
+        wrapperClass={classes.spinner}
+      />
+    );
   }
 
   if (isError) {
-    return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
+    return <h1 className={classes.error}>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
   }
 
   return (

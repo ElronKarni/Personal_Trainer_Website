@@ -3,6 +3,7 @@ import classes from "./Options.module.scss";
 import MotionWrap from "../../wrapper/MotionWrap";
 import OptionCard from "../../components/UI/OptionCard/OptionCard";
 import axios from "axios";
+import { Oval } from "react-loader-spinner";
 
 const Options = () => {
   const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
@@ -12,11 +13,21 @@ const Options = () => {
   });
 
   if (isLoading) {
-    return <h1>טוען...</h1>;
+    return (
+      <Oval
+        height="80"
+        width="100"
+        radius="8"
+        color="pink"
+        secondaryColor="black"
+        ariaLabel="loading"
+        wrapperClass={classes.spinner}
+      />
+    );
   }
 
   if (isError) {
-    return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
+    return <h1 className={classes.error}>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
   }
 
   return (

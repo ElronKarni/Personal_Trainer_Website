@@ -24,3 +24,15 @@
     justify-content: center;
   }
 }
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  font-family: $titleFont;
+  color: $pinkColor;
+}
