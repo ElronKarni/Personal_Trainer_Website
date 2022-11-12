@@ -36,7 +36,6 @@ const Navbar = () => {
                 }
               />
             </section>
-            <h1>האתר פותח על ידי אלרון קרני</h1>
           </motion.div>
         )}
       </div>

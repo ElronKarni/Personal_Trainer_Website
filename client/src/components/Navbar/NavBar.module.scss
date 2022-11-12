@@ -167,11 +167,6 @@
           width: 2rem;
         }
       }
-      h1 {
-        font-size: 1rem;
-        color: $pinkColor;
-        margin-right: 1.6rem;
-      }
     }
     @include media(">Resp660") {
       display: none;
