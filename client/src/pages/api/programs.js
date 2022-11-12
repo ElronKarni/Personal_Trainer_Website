@@ -19,9 +19,9 @@ export default async function handler(req, res) {
 
     case "GET":
       try {
+        console.log("problem");
         res.json("CONNECTING TO MONGO");
         await connectMongo();
-        res.json("GOT CONNECTED TO MONGO");
         const Programs = await Program.find();
         res.json(Programs);
       } catch (err) {
