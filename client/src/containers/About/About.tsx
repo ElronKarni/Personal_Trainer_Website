@@ -1,6 +1,5 @@
 import classes from "./About.module.scss";
-import { images } from "../../constants/index";
-import profile from "../../public/assets/profile.png";
+import profile from "../../../public/assets/profile.png";
 import Image from "next/image";
 
 const About = () => {
