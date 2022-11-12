@@ -9,32 +9,33 @@ import { useState, useEffect } from "react";
 
 const About = () => {
   const [programs, setPrograms] = useState([]);
-  const [fetch, setFetch] = useState(false);
-  // const { data, isLoading, isError } = useQuery(["programsData"], async () => {
-  //   return await axios
-  //     .get("https://personal-trainer-website.vercel.app/api/programs")
-  //     .then((res) => res.data);
-  // });
 
-  // if (isLoading) {
-  //   return <h1>טוען...</h1>;
-  // }
+  const { data, isLoading, isError } = useQuery(["programsData"], async () => {
+    return await axios
+      .get("https://personal-trainer-website.vercel.app/api/programs")
+      .then((res) => res.data);
+  });
 
-  // if (isError) {
-  //   return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
-  // }
+  if (isLoading) {
+    return <h1>טוען...</h1>;
+  }
 
-  const fetching = async () => {
-    const res = await axios.get(
-      "https://personal-trainer-website.vercel.app/api/programs"
-    );
-    const programs = res.data;
-    setPrograms(programs);
-  };
+  if (isError) {
+    return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
+  }
 
-  useEffect(() => {
-    fetching;
-  }, [fetch]);
+  // const fetching = async () => {
+  //   console.log('dada')
+  //   const res = await axios.get(
+  //     "https://personal-trainer-website.vercel.app/api/programs"
+  //   );
+  //   const programs = res.data;
+  //   setPrograms(programs);
+  // };
+
+  // useEffect(() => {
+  //   fetching;
+  // }, [fetch]);
 
   return (
     <div className={classes.programs}>
@@ -42,7 +43,7 @@ const About = () => {
         <h1>תוכנית אימונים</h1>
       </div>
       <section className={classes.all_cards}>
-        {programs?.map((program) => (
+        {data?.map((program) => (
           <TrainingCard
             key={program._id}
             image={program.image}
@@ -50,7 +51,6 @@ const About = () => {
             description={program.description}
           />
         ))}
-        <button onClick={setFetch(!fetch)}>fetch</button>
       </section>
     </div>
   );
