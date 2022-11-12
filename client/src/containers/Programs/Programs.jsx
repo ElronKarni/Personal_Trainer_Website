@@ -5,11 +5,8 @@ import MotionWrap from "../../wrapper/MotionWrap";
 import axios from "axios";
 import trx from "../../../public/assets/trx.png";
 import kickbox from "../../../public/assets/kickbox.png";
-import { useState, useEffect } from "react";
 
 const About = () => {
-  const [programs, setPrograms] = useState([]);
-
   const { data, isLoading, isError } = useQuery(["programsData"], async () => {
     return await axios
       .get("https://personal-trainer-website.vercel.app/api/programs")
@@ -23,19 +20,6 @@ const About = () => {
   if (isError) {
     return <h1>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
   }
-
-  // const fetching = async () => {
-  //   console.log('dada')
-  //   const res = await axios.get(
-  //     "https://personal-trainer-website.vercel.app/api/programs"
-  //   );
-  //   const programs = res.data;
-  //   setPrograms(programs);
-  // };
-
-  // useEffect(() => {
-  //   fetching;
-  // }, [fetch]);
 
   return (
     <div className={classes.programs}>
