@@ -9,7 +9,7 @@ import kickbox from "../../../public/assets/kickbox.png";
 const About = () => {
   const { data, isLoading, isError } = useQuery(["programsData"], async () => {
     return await axios
-      .get("https://personal-trainer-website.vercel.app/api/programs")
+      .get("https://lior-malul-trainer.vercel.app/api/programs")
       .then((res) => res.data);
   });
 
