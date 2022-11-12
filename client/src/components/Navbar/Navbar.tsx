@@ -18,18 +18,25 @@ const Navbar = () => {
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
+
             <section className={classes.phone_menu}>
               <BsFillTelephoneInboundFill />
               <a href="tel:+972 (050) 293-3304">חייגו עכשיו: 050-2933304</a>
             </section>
+
             <section className={classes.social_menu}>
               <BsInstagram
-                onClick={() => window.open("https://github.com/ElronKarni")}
+                onClick={() =>
+                  window.open("https://www.instagram.com/lior_malul123/")
+                }
               />
               <FaFacebookF
-                onClick={() => window.open("https://github.com/ElronKarni")}
+                onClick={() =>
+                  window.open("https://www.facebook.com/lioor.malul")
+                }
               />
             </section>
+            <h1>האתר פותח על ידי אלרון קרני</h1>
           </motion.div>
         )}
       </div>
@@ -48,12 +55,14 @@ const Navbar = () => {
         <p>אפשר למצוא אותי גם-</p>
         <div>
           <BsInstagram
-            onClick={() => window.open("https://github.com/ElronKarni")}
+            onClick={() =>
+              window.open("https://www.instagram.com/lior_malul123/")
+            }
           />
         </div>
         <div>
           <FaFacebookF
-            onClick={() => window.open("https://github.com/ElronKarni")}
+            onClick={() => window.open("https://www.facebook.com/lioor.malul")}
           />
         </div>
       </div>
