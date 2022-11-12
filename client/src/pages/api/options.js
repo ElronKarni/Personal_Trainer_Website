@@ -8,9 +8,9 @@ export default async function handler(req, res) {
         const { title, description } = req.body;
         await connectMongo();
         const newOption = await Option.create(req.body);
-        res.json({ newOption });
+        res.json(newOption);
       } catch (err) {
-        res.json({ err });
+        res.json(err);
       }
 
     case "GET":
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         const Options = await Option.find();
         res.json(Options);
       } catch (err) {
-        res.json({ err });
+        res.json(err);
       }
   }
 }
