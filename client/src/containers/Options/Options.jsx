@@ -7,16 +7,16 @@ import { Oval } from "react-loader-spinner";
 
 const Options = () => {
   // [Deploy fetching]
-  // const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
-  //   return await axios
-  //     .get("https://lior-malul-trainer.vercel.app/api/options")
-  //     .then((res) => res.data);
-  // });
+  const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
+    return await axios
+      .get("https://lior-malul-trainer.vercel.app/api/options")
+      .then((res) => res.data);
+  });
 
   // [Localhost fetching]
-  const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
-    return await axios.get("/api/options").then((res) => res.data);
-  });
+  // const { data, isLoading, isError } = useQuery(["optionsData"], async () => {
+  //   return await axios.get("/api/options").then((res) => res.data);
+  // });
 
   if (isLoading) {
     return (
