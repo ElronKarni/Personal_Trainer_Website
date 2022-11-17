@@ -4,7 +4,7 @@
   "editor.lineHeight": 0,
   "editor.fontFamily": "cascadia code",
   "editor.fontLigatures": true,
-  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.fontSize": 18,
   "terminal.integrated.fontFamily": "cascadia code",
 
   "workbench.colorCustomizations": {
