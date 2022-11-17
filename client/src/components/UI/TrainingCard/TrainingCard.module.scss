@@ -5,7 +5,7 @@
   color: $whiteColor;
   padding: 1rem 1rem 1rem 1rem;
 
-  font-family: $titleFont;
+  // font-family: $titleFont;
 
   .items_position {
     border: 3px solid $pinkColor;
@@ -64,11 +64,11 @@
       display: flex;
       flex-wrap: wrap;
       width: 400px;
-      min-height: 220px;
+      min-height: 280px;
       font-size: 20px;
       line-height: 22px;
       letter-spacing: 0.01em;
-      text-align: justify;
+      text-align: start;
       margin-top: 0rem;
       padding: 0rem 1rem;
 
@@ -83,9 +83,7 @@
 
       button {
         font-size: 20px;
-        width: 80px;
         min-height: 40px;
-
         @include media("<=Resp660") {
           font-size: 15px;
           min-height: 30px;

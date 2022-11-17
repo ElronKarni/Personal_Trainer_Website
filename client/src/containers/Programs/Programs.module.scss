@@ -10,7 +10,7 @@
     h1 {
       display: flex;
       justify-content: center;
-      font-family: $titleFont;
+      // font-family: $titleFont;
       font-size: 3rem;
       color: $pinkColor;
       margin: 0.4rem;
@@ -33,6 +33,6 @@
 .error {
   display: flex;
   justify-content: center;
-  font-family: $titleFont;
+  // font-family: $titleFont;
   color: $pinkColor;
 }

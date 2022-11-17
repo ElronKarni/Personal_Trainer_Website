@@ -1,0 +1,31 @@
+@import "../../styles/Variables/Variables.scss";
+
+.footer {
+  padding-top: 2rem;
+  section {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    color: $pinkColor;
+    background-color: rgb(150, 119, 143);
+  }
+  span {
+    padding: 1rem;
+    ul {
+      padding: 0rem;
+    }
+    li {
+      list-style: none;
+      line-height: 22px;
+    }
+  }
+
+  .rights {
+    display: flex;
+    justify-content: space-between;
+    .right_div {
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+  }
+}

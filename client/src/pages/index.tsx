@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import About from "../containers/About/About";
 import Options from "../containers/Options/Options";
 import Programs from "../containers/Programs/Programs";
+import Footer from "../containers/Footer/Footer";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,6 +21,7 @@ const HomePage = () => {
         <About />
         <Options />
         <Programs />
+        <Footer />
       </QueryClientProvider>
     </>
   );
