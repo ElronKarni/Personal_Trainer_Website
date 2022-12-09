@@ -1,3 +1,4 @@
+import { useLayoutEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import classes from "./Programs.module.scss";
 import TrainingCard from "../../components/UI/TrainingCard/TrainingCard";
@@ -8,34 +9,46 @@ import trx from "../../../public/assets/trx.png";
 import kickbox from "../../../public/assets/kickbox.png";
 
 const About = () => {
-  // Deploy fetching
-  const { data, isLoading, isError } = useQuery(["programsData"], async () => {
-    if (location.hostname === "localhost") {
-      return await axios.get("/api/programs").then((res) => res.data);
-    } else {
-      return await axios
-        .get("https://lior-malul-trainer.vercel.app/api/programs")
-        .then((res) => res.data);
-    }
-  });
+  const [data, setData] = useState([]);
 
-  if (isLoading) {
-    return (
-      <Oval
-        height="80"
-        width="100"
-        radius="8"
-        color="pink"
-        secondaryColor="black"
-        ariaLabel="loading"
-        wrapperClass={classes.spinner}
-      />
-    );
-  }
+  const fetchingData = async () => {
+    const response = await axios
+      .get("https://lior-malul-trainer.vercel.app/api/programs")
+      .then((res) => res.data);
+    setData(response);
+  };
 
-  if (isError) {
-    return <h1 className={classes.error}>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
-  }
+  useLayoutEffect(() => {
+    fetchingData();
+  }, []);
+
+  // const { data, isLoading, isError } = useQuery(["programsData"], async () => {
+  //   if (location.hostname === "localhost") {
+  //     return await axios.get("/api/programs").then((res) => res.data);
+  //   } else {
+  //     return await axios
+  //       .get("https://lior-malul-trainer.vercel.app/api/programs")
+  //       .then((res) => res.data);
+  //   }
+  // });
+
+  // if (isLoading) {
+  //   return (
+  //     <Oval
+  //       height="80"
+  //       width="100"
+  //       radius="8"
+  //       color="pink"
+  //       secondaryColor="black"
+  //       ariaLabel="loading"
+  //       wrapperClass={classes.spinner}
+  //     />
+  //   );
+  // }
+
+  // if (isError) {
+  //   return <h1 className={classes.error}>סליחה יש בעיה בבקשה תרענן את הדף</h1>;
+  // }
 
   return (
     <div className={classes.programs}>
