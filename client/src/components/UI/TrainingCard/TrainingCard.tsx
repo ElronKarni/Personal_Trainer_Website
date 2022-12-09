@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./TrainingCard.module.scss";
 import Image from "next/image";
-import kickbox from "../../../../public/assets/kickbox.png";
+
 const TrainingCard = (props: {
   image: string;
   title: string;
@@ -13,7 +13,6 @@ const TrainingCard = (props: {
         <div className={classes.image_container}>
           <img
             src={props.image}
-            // src={props.image}
             // layout="fill"
             className={classes.img}
             alt="missing pic"
