@@ -10,9 +10,7 @@ const Options = () => {
   const [data, setData] = useState([]);
 
   const fetchingData = async () => {
-    const response = await axios
-      .get("https://lior-malul-trainer.vercel.app/api/options")
-      .then((res) => res.data);
+    const response = await axios.get("/api/options").then((res) => res.data);
     setData(response);
   };
 

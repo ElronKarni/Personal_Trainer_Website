@@ -7,11 +7,7 @@ export default async function handler(req, res) {
       try {
         res.json("CONNECTING TO MONGO");
         await connectMongo();
-        console.log("GOT CONNECTED TO MONGO");
-
-        console.log("CREATING TO MONGO");
         const newProgram = await Program.create(req.body);
-        console.log("GOT CREATED TO MONGO");
         res.json(newProgram);
       } catch (err) {
         res.json(err);
