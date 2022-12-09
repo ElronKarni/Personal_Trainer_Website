@@ -1,8 +1,6 @@
 import classes from "./OptionCard.module.scss";
 
-const OptionCard: React.FC<{ title: string; description: string }> = (
-  props
-) => {
+const OptionCard = (props: { title: string; description: string }) => {
   return (
     <div className={classes.options_card}>
       <div className={classes.options_position}>

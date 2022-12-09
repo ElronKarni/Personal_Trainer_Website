@@ -26,6 +26,7 @@ type Programs = [
 ];
 
 const HomePage = (props: { options: Options; programs: Programs }) => {
+  props.programs.map((item) => console.log(item.image));
   return (
     <>
       <Navbar />

@@ -1,18 +1,18 @@
 import React from "react";
 import classes from "./TrainingCard.module.scss";
 import Image from "next/image";
-const TrainingCard: React.FC<{
+const TrainingCard = (props: {
   image: string;
   title: string;
   description: string;
-}> = (props) => {
+}) => {
   return (
     <div className={classes.card}>
       <div className={classes.items_position}>
         <div className={classes.image_container}>
-          <Image
+          <img
             src={props.image}
-            layout="fill"
+      
             className={classes.img}
             alt="missing pic"
           />
