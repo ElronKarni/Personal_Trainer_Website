@@ -81,7 +81,7 @@ const HomePage = (props: { options: Options; programs: Programs }) => {
 
 export default HomePage;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const options = await axios
     .get("https://lior-malul-trainer.vercel.app/api/options")
     .then((res) => res.data);
