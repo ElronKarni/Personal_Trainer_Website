@@ -10,9 +10,9 @@ const TrainingCard = (props: {
     <div className={classes.card}>
       <div className={classes.items_position}>
         <div className={classes.image_container}>
-          <img
+          <Image
             src={props.image}
-      
+            layout="fill"
             className={classes.img}
             alt="missing pic"
           />

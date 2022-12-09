@@ -26,7 +26,7 @@ type Programs = [
 ];
 
 const HomePage = (props: { options: Options; programs: Programs }) => {
-  props.programs.map((item) => console.log(item.image));
+  // props.programs.map((item) => console.log(item.image));
   return (
     <>
       <Navbar />
@@ -81,7 +81,7 @@ const HomePage = (props: { options: Options; programs: Programs }) => {
 
 export default HomePage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const options = await axios
     .get("https://lior-malul-trainer.vercel.app/api/options")
     .then((res) => res.data);
