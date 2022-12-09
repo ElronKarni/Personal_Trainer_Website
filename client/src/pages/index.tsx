@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar/Navbar";
 import optionsClasses from "../containers/Options/Options.module.scss";
 import programsClasses from "../containers/Programs/Programs.module.scss";
 import { motion } from "framer-motion";
-import trx from "../../../public/assets/trx.png";
-import kickbox from "../../../public/assets/kickbox.png";
+import trx from "../../public/assets/trx.png";
+import kickbox from "../../public/assets/kickbox.png";
 
 type Options = [
   {
