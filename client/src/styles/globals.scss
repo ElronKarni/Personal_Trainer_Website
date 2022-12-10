@@ -1,8 +1,9 @@
+@import "../styles/Variables/Variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@1000;600&family=Lobster&display=swap");
 body {
   direction: rtl;
   margin: 0;
-  background-color: rgba(39, 1, 8, 0.603);
+  background-color: $appBackGroundColor;
   font-family: "Fredoka", sans-serif;
 }
 

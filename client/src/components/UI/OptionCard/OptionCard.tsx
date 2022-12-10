@@ -10,7 +10,7 @@ const OptionCard = (props: { title: string; description: string }) => {
         </div>
 
         <div className={classes.options_button_position}>
-          <button>שעות עבודה</button>
+          <button></button>
         </div>
       </div>
     </div>

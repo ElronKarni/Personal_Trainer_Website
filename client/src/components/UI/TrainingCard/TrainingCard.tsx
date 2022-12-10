@@ -22,7 +22,7 @@ const TrainingCard = (props: {
         <h1>{props.title}</h1>
         <p>{props.description}</p>
         <div className={classes.button_position}>
-          <button>למד עוד</button>
+          <button></button>
         </div>
       </div>
     </div>

@@ -1,12 +1,13 @@
-import axios from "axios";
-import { About, Footer } from "../containers/index";
+import { motion } from "framer-motion";
+import { Footer } from "../containers/index";
 import { OptionCard, TrainingCard } from "../components/UI/index";
 import Navbar from "../components/Navbar/Navbar";
+import About from "../containers/SecondAbout/About";
+
 import optionsClasses from "../containers/Options/Options.module.scss";
 import programsClasses from "../containers/Programs/Programs.module.scss";
-import { motion } from "framer-motion";
-import trx from "../../public/assets/trx.png";
-import kickbox from "../../public/assets/kickbox.png";
+
+import OptionsAndProgramsProps from "../lib/OptionsAndProgramsProps";
 
 type Options = [
   {
@@ -26,7 +27,6 @@ type Programs = [
 ];
 
 const HomePage = (props: { options: Options; programs: Programs }) => {
-  // props.programs.map((item) => console.log(item.image));
   return (
     <>
       <Navbar />
@@ -50,7 +50,12 @@ const HomePage = (props: { options: Options; programs: Programs }) => {
             )
           )}
         </div>
-
+      </motion.div>
+      <motion.div
+        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: 0.7 }}
+        className={`app__flex`}
+      >
         <div className={programsClasses.programs}>
           <div className={programsClasses.programs_title}>
             <h1>תוכנית אימונים</h1>
@@ -81,18 +86,4 @@ const HomePage = (props: { options: Options; programs: Programs }) => {
 
 export default HomePage;
 
-export async function getStaticProps() {
-  const options = await axios
-    .get("https://lior-malul-trainer.vercel.app/api/options")
-    .then((res) => res.data);
-  const programs = await axios
-    .get("https://lior-malul-trainer.vercel.app/api/programs")
-    .then((res) => res.data);
-
-  return {
-    props: {
-      options,
-      programs,
-    },
-  };
-}
+export const getStaticProps = OptionsAndProgramsProps;
