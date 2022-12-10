@@ -24,5 +24,6 @@ $footerColor: rgba(173, 22, 110, 0.25);
 
   &:hover {
     background-image: url("../../../public/assets/muscle1.png");
+    transition: all 0.5s ease;
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./Form.module.scss";
 
 export const Form = () => {
   return (
@@ -43,10 +44,10 @@ export const Form = () => {
       </div>
       <div style={{ padding: "1rem" }}>
         <button
+          className={classes.hoverButton}
           style={{
             width: "500px",
             height: "40px",
-            backgroundColor: "rgba(255, 93, 214, 0.7)",
             fontSize: "1rem",
             color: "rgb(232, 232, 232)",
           }}
