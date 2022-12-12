@@ -3,44 +3,16 @@ import classes from "./Form.module.scss";
 
 export const Form = () => {
   return (
-    <form
-      style={{
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <div style={{ padding: "1rem" }}>
-        <input
-          placeholder="שם מלא *"
-          style={{ fontSize: "1rem", width: "500px", height: "43px" }}
-        />
+    <form className={classes.form}>
+      <div className={classes.name_div}>
+        <input placeholder="שם מלא *" />
       </div>
-      <div style={{ display: "flex", flexDirection: "row", padding: "1rem" }}>
-        <input
-          placeholder="טלפון *"
-          style={{
-            fontSize: "1rem",
-            marginLeft: "10px",
-            width: "245px",
-            height: "43px",
-          }}
-        />
-        <input
-          placeholder="מייל"
-          style={{ fontSize: "1rem", width: "245px", height: "43px" }}
-        />
+      <div className={classes.phone_div}>
+        <input className={classes.phone_input} placeholder="טלפון *" />
+        <input className={classes.mail_input} placeholder="מייל" />
       </div>
-      <div style={{ padding: "1rem" }}>
-        <textarea
-          placeholder="הודעה"
-          style={{
-            fontSize: "1rem",
-            width: "500px",
-            height: "120px",
-            fontFamily: "Helvetica",
-          }}
-        />
+      <div className={classes.textarea_div}>
+        <textarea placeholder="הודעה" />
       </div>
       <div style={{ padding: "1rem" }}>
         <button

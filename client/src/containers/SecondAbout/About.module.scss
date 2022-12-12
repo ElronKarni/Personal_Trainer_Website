@@ -1,7 +1,75 @@
+@import "../../styles/breakpoints/breakpoints.scss";
 .section {
+  display: flex;
+  justify-content: flex-start;
+
   background-image: url("https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg");
 
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+
+  .images_div {
+    width: 700px;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    margin-right: 5rem;
+    img {
+      height: 650px;
+      width: 700px;
+    }
+  }
+  .aboutCard_div {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    margin-top: 6rem;
+    margin-bottom: 1.2rem;
+    margin-right: 10rem;
+  }
+  @include media("<=desktop") {
+    .images_div {
+      width: 500px;
+      margin-top: 6rem;
+      margin-bottom: 1rem;
+      margin-right: 5rem;
+      img {
+        height: 500px;
+        width: 500px;
+      }
+    }
+    .aboutCard_div {
+      display: flex;
+      justify-content: center;
+      width: 600px;
+      margin-top: 6rem;
+      margin-bottom: 1.2rem;
+      margin-right: 10rem;
+    }
+  }
+  // @include media("<=Resp830") {
+  //   justify-content: center;
+  //   .images_div {
+  //     width: 400px;
+
+  //     margin-top: 6rem;
+  //     margin-bottom: 1rem;
+  //     margin-right: 5rem;
+  //     img {
+  //       height: 400px;
+  //       width: 400px;
+  //     }
+  //   }
+  //   .aboutCard_div {
+  //     display: flex;
+  //     justify-content: center;
+  //     width: 600px;
+  //     margin-top: 6rem;
+  //     margin-bottom: 1.2rem;
+  //     margin-right: 10rem;
+  //   }
+  // }
+
+  // @include media("<=Resp660") {
+  // }
 }

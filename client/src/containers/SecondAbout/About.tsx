@@ -9,43 +9,21 @@ import classes from "./About.module.scss";
 
 const About = () => {
   return (
-    <section
-      className={classes.section}
-      style={{
-        display: "flex",
-        justifyContent: "flex-start",
-      }}
-    >
-      <div
-        style={{
-          width: "700px",
-          marginTop: "6rem",
-          marginBottom: "1rem",
-          marginRight: "5rem",
-        }}
-      >
+    <section className={classes.section}>
+      <div className={classes.images_div}>
         <Zoom scale={1.4}>
-          <Image src={images.profile1} width={700} height={650} alt="missing" />
-          <Image src={images.profile2} width={700} height={650} alt="missing" />
-          <Image src={images.profile3} width={700} height={650} alt="missing" />
-          <Image src={images.profile4} width={700} height={650} alt="missing" />
-          <Image src={images.profile5} width={700} height={650} alt="missing" />
-          <Image src={images.profile6} width={700} height={650} alt="missing" />
-          <Image src={images.profile7} width={700} height={650} alt="missing" />
-          <Image src={images.profile8} width={700} height={650} alt="missing" />
+          <Image src={images.profile1} alt="missing" />
+          <Image src={images.profile2} alt="missing" />
+          <Image src={images.profile3} alt="missing" />
+          <Image src={images.profile4} alt="missing" />
+          <Image src={images.profile5} alt="missing" />
+          <Image src={images.profile6} alt="missing" />
+          <Image src={images.profile7} alt="missing" />
+          <Image src={images.profile8} alt="missing" />
           <Image src={images.profile9} width={700} height={650} alt="missing" />
         </Zoom>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          width: "600px",
-          marginTop: "6rem",
-          marginBottom: "1.2rem",
-          marginRight: "10rem",
-        }}
-      >
+      <div className={classes.aboutCard_div}>
         <AboutCard />
       </div>
     </section>
