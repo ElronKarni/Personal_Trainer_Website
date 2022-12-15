@@ -3,45 +3,100 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
   .name_div {
     padding: 1rem;
+    @include media("<=Laptop") {
+      padding: 0.5rem;
+    }
     input {
       font-size: 1rem;
       width: 500px;
       height: 43px;
+      @include media("<=LGLaptop") {
+        width: 450px;
+      }
+      @include media("<=Laptop") {
+        width: 400px;
+        height: 40px;
+      }
     }
   }
   .phone_div {
     display: flex;
     flex-direction: row;
     padding: 1rem;
+    @include media("<=Laptop") {
+      padding: 0.5rem;
+
+      flex-wrap: nowrap;
+    }
+
     .phone_input {
       font-size: 1rem;
       margin-left: 10px;
       width: 245px;
       height: 43px;
+      @include media("<=LGLaptop") {
+        width: 220px;
+      }
+      @include media("<=Laptop") {
+        width: 195px;
+        height: 40px;
+      }
     }
     .mail_input {
       font-size: 1rem;
       width: 245px;
       height: 43px;
+      @include media("<=LGLaptop") {
+        width: 220px;
+      }
+      @include media("<=Laptop") {
+        width: 195px;
+        height: 40px;
+      }
     }
   }
   .textarea_div {
     padding: 1rem;
+    @include media("<=Laptop") {
+      padding: 0.5rem;
+    }
     textarea {
       font-size: 1rem;
       width: 500px;
       height: 120px;
       font-family: Helvetica;
-      @include media("<=desktop") {
-        height: 50px;
+      @include media("<=LGLaptop") {
+        height: 120px;
+        width: 450px;
+      }
+      @include media("<=Laptop") {
+        width: 400px;
       }
     }
   }
 }
 .hoverButton {
-  background-color: rgba(255, 93, 214, 0.7);
+  padding: 1rem;
+  @include media("<=Laptop") {
+  }
+
+  button {
+    background-color: rgba(255, 93, 214, 0.7);
+    width: 500px;
+    height: 40px;
+    font-size: 1rem;
+    color: rgb(232, 232, 232);
+    @include media("<=LGLaptop") {
+      width: 450px;
+    }
+    @include media("<=Laptop") {
+      width: 384px;
+    }
+  }
+
   &:hover {
     transition: all 0.5s ease;
     background-color: rgba(131, 3, 99, 0.7);

@@ -5,6 +5,13 @@
   background-color: rgba(173, 22, 110, 0.25);
   color: $whiteColor;
   width: 100%;
+  height: 550px;
+  @include media("<=LGLaptop") {
+    width: 550px;
+  }
+  @include media("<=Laptop") {
+    height: 500px;
+  }
   div {
     display: flex;
     justify-content: center;
@@ -14,14 +21,13 @@
     }
     p {
       font-size: 1.2rem;
+      @include media("<=LGLaptop") {
+        margin: 0.5rem;
+      }
     }
     h2 {
       margin: 0.3rem;
       font-size: 2rem;
     }
-  }
-  @include media("<=desktop") {
-    height: 505px;
-    margin-left: 3rem;
   }
 }

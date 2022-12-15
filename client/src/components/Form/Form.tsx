@@ -14,18 +14,8 @@ export const Form = () => {
       <div className={classes.textarea_div}>
         <textarea placeholder="הודעה" />
       </div>
-      <div style={{ padding: "1rem" }}>
-        <button
-          className={classes.hoverButton}
-          style={{
-            width: "500px",
-            height: "40px",
-            fontSize: "1rem",
-            color: "rgb(232, 232, 232)",
-          }}
-        >
-          ליאור, תצרי איתי קשר בבקשה!
-        </button>
+      <div className={classes.hoverButton}>
+        <button>ליאור, תצרי איתי קשר בבקשה!</button>
       </div>
     </form>
   );
