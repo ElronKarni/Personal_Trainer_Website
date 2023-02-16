@@ -27,14 +27,14 @@ const Footer = () => {
           </ul>
         </span>
       </section>
-      <div className={classes.rights}>
+      {/* <div className={classes.rights}>
         <div className={classes.right_div}>
           <p>כל הזכויות שמורות © לאלרון קרני 2022</p>
         </div>
         <div className={classes.right_div}>
           <p>אתר זה פותח על ידי אלרון קרני</p>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
