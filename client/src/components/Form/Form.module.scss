@@ -89,17 +89,16 @@
     height: 40px;
     font-size: 1rem;
     color: rgb(232, 232, 232);
+    &:hover {
+      transition: all 0.5s ease;
+      background-color: rgba(131, 3, 99, 0.7);
+      cursor: pointer;
+    }
     @include media("<=LGLaptop") {
       width: 450px;
     }
     @include media("<=Laptop") {
       width: 384px;
     }
-  }
-
-  &:hover {
-    transition: all 0.5s ease;
-    background-color: rgba(131, 3, 99, 0.7);
-    cursor: pointer;
   }
 }

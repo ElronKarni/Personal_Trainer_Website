@@ -19,7 +19,7 @@ const TrainingCard = (props: {
           />
         </div>
 
-        <h1>{props.title}</h1>
+        <h2>{props.title}</h2>
         <p>{props.description}</p>
         <div className={classes.button_position}>
           <button></button>

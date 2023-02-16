@@ -5,24 +5,21 @@ const Footer = () => {
     <footer className={classes.footer}>
       <section>
         <span>
-          <h1>רשתות חברתיות</h1>
+          <h2>רשתות חברתיות</h2>
           <ul>
             <li>
-              <a>אינסטגרם</a>
+              <a href="https://www.instagram.com/lior_malul_fit/">אינסטגרם</a>
             </li>
             <li>
-              <a>פייסבוק</a>
+              <a href="https://www.facebook.com/lioor.malul">פייסבוק</a>
             </li>
           </ul>
         </span>
         <span>
-          <h1>יצירת קשר</h1>
+          <h2>יצירת קשר</h2>
           <ul>
             <li>
-              <a>אינסטגרם</a>
-            </li>
-            <li>
-              <a>פייסבוק</a>
+              <a>פלאפון - 050-2933304</a>
             </li>
           </ul>
         </span>

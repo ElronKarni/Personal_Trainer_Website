@@ -55,7 +55,7 @@ const Navbar = () => {
         <div>
           <BsInstagram
             onClick={() =>
-              window.open("https://www.instagram.com/lior_malul123/")
+              window.open("https://www.instagram.com/lior_malul_fit/")
             }
           />
         </div>
